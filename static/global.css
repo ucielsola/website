@@ -1,0 +1,17 @@
+
+
+:root {
+	--primary: #2D4263;
+	--secondary: #C84B31;
+	--dark: #191919;
+	--shadow-color: #191919be;
+	--light: #F6EFED;
+}
+
+* {
+	background-attachment: scroll;
+}
+
+a {
+	text-decoration: none;
+}
