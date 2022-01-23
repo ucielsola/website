@@ -5,15 +5,15 @@
 </script>
 
 <nav>
-	<a title="Uciel Sola @ Linkedin" href="https://linkedin.com/in/ucielsola">
+	<a title="Uciel Sola @ Linkedin" href="https://linkedin.com/in/ucielsola" target="_blank" rel="nofollow noopener" >
 		<div class="icon"><FaLinkedinIn /></div>
 		<span>/in/ucielsola</span>
 	</a>
-	<a title="Uciel Sola @ GitHub" href="https://github.com/ucielsola">
+	<a title="Uciel Sola @ GitHub" href="https://github.com/ucielsola" target="_blank" rel="nofollow noopener" >
 		<div class="icon"><GoMarkGithub /></div>
 		<span>/in/ucielsola</span>
 	</a>
-	<a title="Download resumee" href="https://ucielsola.com/uciel-sola-resumee.pdf">
+	<a title="Download resumee" href="https://drive.google.com/uc?export=download&id=1t61U27tgG4_4kIbfTrSUqyO6Py748PP_" download rel="nofollow noopener" >
 		<div class="icon"><GoCloudDownload /></div>
 		<span>resumee</span>
 	</a>
@@ -33,7 +33,7 @@
 		border-top-right-radius: 15px;
 		background-color: var(--dark);
 		box-shadow: 1px -7px 43px -4px var(--shadow-color);
-		animation: slide-in-bottom 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+		animation: slide-in-bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 	}
 
 	.icon {
@@ -49,9 +49,14 @@
 		transition: color 0.18s ease-in-out 0.1s;
 	}
 
+	a:active {
+		color: var(--secondary);
+		transition: color 0.18s ease-in-out;
+	}
+
 	@keyframes slide-in-bottom {
 		0% {
-			transform: translateY(1000px);
+			transform: translateY(190%);
 			opacity: 0;
 		}
 		100% {
