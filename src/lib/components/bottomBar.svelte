@@ -1,0 +1,69 @@
+<script>
+	import GoCloudDownload from 'svelte-icons/go/GoCloudDownload.svelte';
+	import GoMarkGithub from 'svelte-icons/go/GoMarkGithub.svelte';
+	import FaLinkedinIn from 'svelte-icons/fa/FaLinkedinIn.svelte';
+</script>
+
+<nav>
+	<a title="Uciel Sola @ Linkedin" href="https://linkedin.com/in/ucielsola">
+		<div class="icon"><FaLinkedinIn /></div>
+		<span>/in/ucielsola</span>
+	</a>
+	<a title="Uciel Sola @ GitHub" href="https://github.com/ucielsola">
+		<div class="icon"><GoMarkGithub /></div>
+		<span>/in/ucielsola</span>
+	</a>
+	<a title="Download resumee" href="https://ucielsola.com/uciel-sola-resumee.pdf">
+		<div class="icon"><GoCloudDownload /></div>
+		<span>resumee</span>
+	</a>
+</nav>
+
+<style>
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 25rem;
+		margin-inline: auto;
+		padding-inline: 2rem;
+		padding-block: 1rem 0.5rem;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		background-color: var(--dark);
+		box-shadow: 1px -7px 43px -4px var(--shadow-color);
+		animation: slide-in-bottom 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+	}
+
+	.icon {
+		width: 36px;
+		height: 36px;
+	}
+
+	a {
+		color: var(--light);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: color 0.18s ease-in-out 0.1s;
+	}
+
+	@keyframes slide-in-bottom {
+		0% {
+			transform: translateY(1000px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		a:hover {
+			color: var(--secondary);
+			transition: color 0.18s ease-in-out;
+		}
+	}
+</style>
