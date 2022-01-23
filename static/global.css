@@ -1,3 +1,23 @@
+/* play-regular - latin */
+@font-face {
+	font-family: 'Play';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('./fonts/play/play-v12-latin-regular.woff2') format('woff2'),
+		/* Chrome 26+, Opera 23+, Firefox 39+ */ url('./fonts/play/play-v12-latin-regular.woff')
+			format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''), url('./fonts/open-sansopen-sans-v27-latin-regular.woff2') format('woff2'),
+		/* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('./fonts/open-sansopen-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 
 
 :root {
@@ -6,6 +26,9 @@
 	--dark: #191919;
 	--shadow-color: #191919be;
 	--light: #F6EFED;
+	
+	--title-font: 'Play', sans-serif;
+	--body-font: 'Open Sans', sans-serif;
 }
 
 * {
