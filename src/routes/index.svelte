@@ -10,20 +10,66 @@
 
 <section>
 	<p>
-		I'm currently working at <a href="https://viset.app" class="highlight">Viset.app</a>, building
-		an amazing app for meditation and deep relaxation using a powefull tech stack.
+		The internet, computers and all-tech stuff have been a kind o <span class="highlight"
+			>passion</span
+		>
+		for me since childhood. The 2020 pandemic pushed me to try and became a
+		<span class="highlight">Web Developer</span>, and I'm really happy with the incredibly wide
+		range of <span class="highlight">opportunitties</span> that the IT world can give.
+	</p>
+</section>
+
+<section class="row">
+	<p>
+		I'm currently working at <a
+			href="https://viset.app"
+			class="highlight"
+			target="_blank"
+			rel="noopener noreferrer nofollower">Viset.app</a
+		>, building an amazing app for meditation and deep relaxation using a powefull tech stack.
+		<br />
+		We work with the agile <span class="highlight">Scrum</span> model, and so far it's being a
+		really great and <span class="highlight">formative experience</span>.
 	</p>
 	<div class="screenshots-wrapper">
 		<div class="image-wrapper one">
-			<img src="/images/viset_1.png" alt="Viset App Screenshot" class="screenshot" />
+			<img src="/images/viset_1.webp" alt="Viset App Screenshot" class="screenshot" />
 		</div>
 		<div class="image-wrapper two">
-			<img src="/images/viset_2.png" alt="Viset App Screenshot" class="screenshot" />
+			<img src="/images/viset_2.webp" alt="Viset App Screenshot" class="screenshot" />
 		</div>
 	</div>
 </section>
 
 <section>
+	<p>
+		My last freelance gig was with the amazing people of <a
+			href="https://ucihuen.com.ar"
+			class="highlight"
+			rel="noreferrer noopener">Cabaña Ucihuen</a
+		>, a beautiful rental cabin from the argentinian Patagonia. <br />
+		I've built their website using the almighty (and new boy in town)
+		<a href="https://kit.svelte.dev" class="highlight">SvelteKit Framework</a>. It takes the
+		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
+		provides the greatest developing experience I've tasted so far. Also,
+		<span class="highlight">SEO</span> was a key feature for this project, and using semantic HTML and
+		all the good practices I could find, were my first priorities.
+	</p>
+
+	<a href="https://ucihuen.com.ar" rel="noreferrer noopener" title="Visit site">
+		<div class="screenshot-wrapper">
+			<img src="/images/ucihuen.webp" alt="Ucihuen Screenshot" title="Visit site" class="ucihuen-screenshot" />
+		</div>
+	</a>
+</section>
+
+<section class="row inverted">
+	<p>
+		Since day 1, I keep <span class="highlight">learning</span> and
+		<span class="highlight">improving</span>
+		my skills with this amazing <span class="highlight">tools</span> and
+		<span class="highlight">languages</span>.
+	</p>
 	<TechGrid />
 </section>
 
@@ -67,6 +113,17 @@
 		transition: all 0.18s ease-in-out;
 	}
 
+    .screenshot-wrapper {
+        display: grid;
+        place-content: center;
+    }
+
+    .ucihuen-screenshot {
+        margin-top: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px var(--shadow-color);
+    }
+
 	@media (min-width: 400px) {
 		.image-wrapper.two {
 			right: -35%;
@@ -84,19 +141,31 @@
 	}
 
 	@media (min-width: 1024px) {
+		.screenshots-wrapper {
+			display: flex;
+			align-items: center;
+		}
 		.image-wrapper.one {
 			margin-left: 0;
+			width: 18rem;
 		}
 		.image-wrapper.two {
 			position: relative;
 			right: unset;
-			width: 25rem;
+			width: 27rem;
 			bottom: unset;
 			transform: translateY(0);
 		}
 		.screenshot:hover {
 			transition: all 0.18s ease-in-out;
-			transform: scale(1.05);
+			transform: scale(1.008);
+		}
+		.row {
+			display: flex;
+			align-items: center;
+		}
+		.row.inverted {
+			flex-direction: row-reverse;
 		}
 	}
 </style>
