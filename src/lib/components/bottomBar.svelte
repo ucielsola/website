@@ -21,7 +21,7 @@
 
 	const debounceScroll = debounce(() => {
 		stoppedScrolling = true;
-	}, 500);
+	}, 300);
 
 	$: {
 		scrollPos = scrollY;
@@ -64,10 +64,9 @@
 </div>
 
 <style>
-
 	.nav-container {
 		position: relative;
-	} 
+	}
 	nav {
 		position: absolute;
 		display: flex;
@@ -80,15 +79,15 @@
 		padding-block: 1rem 0.5rem;
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
-		background-color: var(--dark);
+		background-color: var(--text-color);
 		box-shadow: 1px -7px 43px -4px var(--shadow-color);
-		left: 40%;	
+		left: 40%;
 	}
 	nav.show {
 		bottom: 0;
 		animation: slide-in-bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 	}
-		nav.hide {
+	nav.hide {
 		bottom: -84px;
 		transition: bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
@@ -98,7 +97,7 @@
 	}
 
 	a {
-		color: var(--light);
+		color: var(--text-contrast)!important;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

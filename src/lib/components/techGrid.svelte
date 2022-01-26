@@ -58,6 +58,9 @@
 		grid-gap: 1.5rem 0;
 		width: 100%;
 		margin-top: 3rem;
+		background: #f3f3f3;
+		padding: 1rem;
+		border-radius: 10px;
 	}
 
 	img {

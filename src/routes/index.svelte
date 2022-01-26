@@ -19,13 +19,15 @@
 	</p>
 </section>
 
+
+
 <section class="row">
 	<p>
 		I'm currently working at <a
 			href="https://viset.app"
 			class="highlight"
 			target="_blank"
-			rel="noopener noreferrer nofollower">Viset.app</a
+			rel="noopener noreferrer nofollower"><img src="/images/link.png" alt="icon link"class="link-icon"/>Viset.app</a
 		>, building an amazing app for meditation and deep relaxation using a powefull tech stack.
 		<br />
 		We work with the agile <span class="highlight">Scrum</span> model, and so far it's being a
@@ -46,10 +48,10 @@
 		My last freelance gig was with the amazing people of <a
 			href="https://ucihuen.com.ar" target="_blank"
 			class="highlight"
-			rel="noreferrer noopener">Cabaña Ucihuen</a
+			rel="noreferrer noopener"><img src="/images/link.png" alt="icon link"class="link-icon"/>Cabaña Ucihuen</a
 		>, a beautiful rental cabin from the argentinian Patagonia. <br />
 		I've built their website using the almighty (and new boy in town)
-		<a href="https://kit.svelte.dev" class="highlight">SvelteKit Framework</a>. It takes the
+		<a href="https://kit.svelte.dev" class="highlight"><img src="/images/link.png" alt="icon link"class="link-icon"/>SvelteKit Framework</a>. It takes the
 		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
 		provides the greatest developing experience I've tasted so far. Also,
 		<span class="highlight">SEO</span> was a key feature for this project, and using semantic HTML and
@@ -94,16 +96,20 @@
 		position: relative;
 	}
 
+	.screenshot {
+		border-radius: 5px;
+	}
+
 	.image-wrapper.one {
-		width: 65vw;
+		width: 45vw;
 		max-width: 25rem;
-		margin-left: -8vw;
+		margin-left: -1vw;
 	}
 
 	.image-wrapper.two {
 		position: absolute;
 		right: -30%;
-		width: clamp(300px, 50vh, 40vw);
+		width: clamp(250px, 40vh, 30vw);
 		bottom: 50%;
 		transform: translateY(50%);
 	}
@@ -111,6 +117,8 @@
 	.screenshot {
 		width: 100%;
 		transition: all 0.18s ease-in-out;
+		filter: drop-shadow(0px 5px 7px var(--shadow-color));
+
 	}
 
     .screenshot-wrapper {
@@ -126,8 +134,8 @@
 
 	@media (min-width: 400px) {
 		.image-wrapper.two {
-			right: -35%;
-			width: clamp(85vw, 50vw, 121rem);
+			right: -15%;
+			width: clamp(55vw, 50vw, 121rem);
 		}
 	}
 	@media (min-width: 800px) {
@@ -135,8 +143,8 @@
 			margin-left: -1rem;
 		}
 		.image-wrapper.two {
-			right: -18%;
-			width: clamp(65vw, 50vw, 121rem);
+			right: -15%;
+			width: clamp(45vw, 50vw, 121rem);
 		}
 	}
 
@@ -147,12 +155,13 @@
 		}
 		.image-wrapper.one {
 			margin-left: 0;
-			width: 18rem;
+			margin-right: 3rem;
+			width: 12rem;
 		}
 		.image-wrapper.two {
 			position: relative;
 			right: unset;
-			width: 27rem;
+			width: 20rem;
 			bottom: unset;
 			transform: translateY(0);
 		}

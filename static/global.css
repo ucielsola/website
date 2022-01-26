@@ -19,17 +19,33 @@
 :root {
 	--primary: #2d4263;
 	--secondary: #c84b31;
-	--dark: #191919;
+	--text-color: #191919;
+	--text-contrast: #f6efede3;
 	--shadow-color: #1919196e;
-	--light: #f6efed;
+	--page-background: #f3f3f3;
 
 	--title-font: 'Play', sans-serif;
 	--body-font: 'Open Sans', sans-serif;
 }
 
+.darkMode {
+	--primary: #39609e;
+	--secondary: #c84b31;
+	--text-contrast: #191919;
+	--text-color: #f6efed;
+	--shadow-color: #d3d3d352;
+	--page-background: #202020;
+}
+
 * {
 	background-attachment: scroll;
+	transition: color 0.35s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body {
+	background-color: var(--page-background);
 	font-family: var(--body-font);
+	color: var(--text-color);
 }
 
 section {
@@ -40,6 +56,11 @@ a {
 	text-decoration: none;
 }
 
+.link-icon {
+	display: inline-block;
+	padding-inline: 0.5rem 0.5rem;
+	width: 32px;
+}
 
 p {
 	font-size: 1.2rem;

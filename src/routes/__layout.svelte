@@ -1,10 +1,15 @@
 <script>
 	import BottomBar from '$lib/components/bottomBar.svelte';
+import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 </script>
 
 <svelte:head>
 	<title>Uciel Sola - Web Dev.</title>
 </svelte:head>
+
+<div class="theme-switcher-container">
+	<ThemeSwitcher/>
+</div>
 
 <main>
 	<slot />
@@ -15,7 +20,12 @@
 </footer>
 
 <style>
-
+	.theme-switcher-container {
+		z-index: 100;
+		position: fixed;
+		right: 1.5rem;
+		top: 1.5rem;
+	}
 	main {
 		max-width: 1920px;
 		margin: 0 auto;
