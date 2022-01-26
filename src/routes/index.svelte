@@ -58,11 +58,11 @@
 		all the good practices I could find, were my first priorities.
 	</p>
 
+	<div class="screenshot-wrapper">
 	<a href="https://ucihuen.com.ar" target="_blank" rel="noreferrer noopener" title="Visit site">
-		<div class="screenshot-wrapper">
 			<img src="/images/ucihuen.webp" alt="Ucihuen Screenshot" title="Visit site" class="ucihuen-screenshot" />
-		</div>
-	</a>
+		</a>
+	</div>
 </section>
 
 <section class="row inverted">

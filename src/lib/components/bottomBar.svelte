@@ -31,8 +31,8 @@
 </script>
 
 <svelte:window bind:scrollY />
-<div class="nav-container">
-	<nav class={stoppedScrolling ? 'show' : 'hide'}>
+<div class="nav-container {stoppedScrolling ? 'show' : 'hide'}">
+	<nav>
 		<a
 			title="Uciel Sola @ Linkedin"
 			href="https://linkedin.com/in/ucielsola"
@@ -65,39 +65,40 @@
 
 <style>
 	.nav-container {
-		position: relative;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		width: 100%;
 	}
 	nav {
-		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		max-width: 25rem;
 		margin-inline: auto;
-		padding-inline: 2rem;
+		padding-inline: 1.3rem;
 		padding-block: 1rem 0.5rem;
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
 		background-color: var(--text-color);
 		box-shadow: 1px -7px 43px -4px var(--shadow-color);
-		left: 40%;
 	}
-	nav.show {
+	.nav-container.show {
 		bottom: 0;
 		animation: slide-in-bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 	}
-	nav.hide {
+	.nav-container.hide {
 		bottom: -84px;
 		transition: bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 	.icon {
-		width: 36px;
-		height: 36px;
+		width: 24px;
+		height: 24px;
 	}
 
 	a {
-		color: var(--text-contrast)!important;
+		color: var(--text-contrast) !important;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -121,6 +122,15 @@
 	}
 
 	@media screen and (min-width: 1024px) {
+		nav {
+			left: 40%;
+			padding-inline: 2rem;
+		}
+
+		.icon {
+			width: 35px;
+			height: 35px;
+		}
 		a:hover {
 			color: var(--secondary);
 			transition: color 0.18s ease-in-out;
