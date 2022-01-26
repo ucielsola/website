@@ -4,8 +4,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''), url('./fonts/play/play-v12-latin-regular.woff2') format('woff2'),
-		/* Chrome 26+, Opera 23+, Firefox 39+ */ url('./fonts/play/play-v12-latin-regular.woff')
-			format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('./fonts/play/play-v12-latin-regular.woff') format('woff');
 }
 
 /* open-sans-regular - latin */
@@ -13,28 +12,51 @@
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: local(''), url('./fonts/open-sansopen-sans-v27-latin-regular.woff2') format('woff2'),
-		/* Chrome 26+, Opera 23+, Firefox 39+ */
-			url('./fonts/open-sansopen-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	src: local(''), url('./fonts/open-sans/open-sans-v27-latin-regular.woff2') format('woff2'),
+		url('./fonts/open-sans/open-sans-v27-latin-regular.woff') format('woff');
 }
 
-
-
 :root {
-	--primary: #2D4263;
-	--secondary: #C84B31;
+	--primary: #2d4263;
+	--secondary: #c84b31;
 	--dark: #191919;
 	--shadow-color: #191919be;
-	--light: #F6EFED;
-	
+	--light: #f6efed;
+
 	--title-font: 'Play', sans-serif;
 	--body-font: 'Open Sans', sans-serif;
 }
 
 * {
 	background-attachment: scroll;
+	font-family: var(--body-font);
+}
+
+section {
+	padding-top: 3rem;
 }
 
 a {
 	text-decoration: none;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+.primary {
+	color: var(--primary);
+}
+
+.highlight {
+	color: var(--secondary);
+}
+.text-right {
+	text-align: right;
+}
+
+@media (min-width: 1024px) {
+	p {
+		font-size: 2rem;
+	}
 }

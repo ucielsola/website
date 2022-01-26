@@ -1,19 +1,55 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import GoCloudDownload from 'svelte-icons/go/GoCloudDownload.svelte';
 	import GoMarkGithub from 'svelte-icons/go/GoMarkGithub.svelte';
 	import FaLinkedinIn from 'svelte-icons/fa/FaLinkedinIn.svelte';
+
+	let scrollY;
+	let scrollUp = false;
+	const showNav = () => {
+		setTimeout(() => {
+			console.log('stop');
+			return true;
+		}, 800);
+	};
+	let scrollPos = 0;
+
+	$: if (scrollY > scrollPos) {
+		console.log('start');
+		let oldScroll = 0;
+		scrollUp = oldScroll < scrollY;
+		showNav();
+	}
 </script>
 
-<nav>
-	<a title="Uciel Sola @ Linkedin" href="https://linkedin.com/in/ucielsola" target="_blank" rel="nofollow noopener" >
+<svelte:window bind:scrollY />
+
+<nav class={showNav ? 'show' : ''}>
+	<a
+		title="Uciel Sola @ Linkedin"
+		href="https://linkedin.com/in/ucielsola"
+		target="_blank"
+		rel="nofollow noopener"
+	>
 		<div class="icon"><FaLinkedinIn /></div>
 		<span>/in/ucielsola</span>
 	</a>
-	<a title="Uciel Sola @ GitHub" href="https://github.com/ucielsola" target="_blank" rel="nofollow noopener" >
+	<a
+		title="Uciel Sola @ GitHub"
+		href="https://github.com/ucielsola"
+		target="_blank"
+		rel="nofollow noopener"
+	>
 		<div class="icon"><GoMarkGithub /></div>
 		<span>/in/ucielsola</span>
 	</a>
-	<a title="Download resumee" href="https://drive.google.com/uc?export=download&id=1t61U27tgG4_4kIbfTrSUqyO6Py748PP_" download rel="nofollow noopener" >
+	<a
+		title="Download resumee"
+		href="https://drive.google.com/uc?export=download&id=1t61U27tgG4_4kIbfTrSUqyO6Py748PP_"
+		download
+		rel="nofollow noopener"
+	>
 		<div class="icon"><GoCloudDownload /></div>
 		<span>resumee</span>
 	</a>
@@ -33,9 +69,10 @@
 		border-top-right-radius: 15px;
 		background-color: var(--dark);
 		box-shadow: 1px -7px 43px -4px var(--shadow-color);
+	}
+	nav.show {
 		animation: slide-in-bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 	}
-
 	.icon {
 		width: 36px;
 		height: 36px;
