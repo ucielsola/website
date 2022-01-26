@@ -44,7 +44,7 @@
 <section>
 	<p>
 		My last freelance gig was with the amazing people of <a
-			href="https://ucihuen.com.ar"
+			href="https://ucihuen.com.ar" target="_blank"
 			class="highlight"
 			rel="noreferrer noopener">Cabaña Ucihuen</a
 		>, a beautiful rental cabin from the argentinian Patagonia. <br />
@@ -56,7 +56,7 @@
 		all the good practices I could find, were my first priorities.
 	</p>
 
-	<a href="https://ucihuen.com.ar" rel="noreferrer noopener" title="Visit site">
+	<a href="https://ucihuen.com.ar" target="_blank" rel="noreferrer noopener" title="Visit site">
 		<div class="screenshot-wrapper">
 			<img src="/images/ucihuen.webp" alt="Ucihuen Screenshot" title="Visit site" class="ucihuen-screenshot" />
 		</div>
