@@ -20,7 +20,7 @@
 	--primary: #2d4263;
 	--secondary: #c84b31;
 	--dark: #191919;
-	--shadow-color: #191919be;
+	--shadow-color: #1919196e;
 	--light: #f6efed;
 
 	--title-font: 'Play', sans-serif;
@@ -58,5 +58,6 @@ p {
 @media (min-width: 1024px) {
 	p {
 		font-size: 2rem;
+		line-height: 175%;
 	}
 }
