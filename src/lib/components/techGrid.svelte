@@ -55,10 +55,27 @@
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: 1fr 1fr;
-        grid-gap: 1.5rem 0;
+		grid-gap: 1.5rem 0;
+		width: 100%;
+		margin-top: 3rem;
 	}
 
-    img {
-        max-width: 10rem;
-    }
+	img {
+		max-width: 8rem;
+		filter: drop-shadow(0px 5px 7px var(--shadow-color));
+		transition: all 0.18s ease-in-out;
+	}
+	@media (min-width: 1024px) {
+		.grid {
+			grid-gap: 2rem;
+			width: 75vw;
+			margin-right: 5rem;
+			margin-top: 0;
+		}
+
+		img:hover {
+			transition: all 0.18s ease-in-out;
+			transform: scale(1.05);
+		}
+	}
 </style>
