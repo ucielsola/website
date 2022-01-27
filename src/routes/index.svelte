@@ -14,7 +14,7 @@ import TechGrid from '$lib/components/techGrid.svelte';
 		The internet, computers and all-tech stuff have been a kind o <span class="highlight"
 			>passion</span
 		>
-		for me since childhood. The 2020 pandemic pushed me to try and became a
+		to me since childhood. The 2020 pandemic pushed me to try and became a
 		<span class="highlight">Web Developer</span>, and I'm really happy with the incredibly wide
 		range of <span class="highlight">opportunitties</span> that the IT world can give.
 	</p>
@@ -56,7 +56,7 @@ import TechGrid from '$lib/components/techGrid.svelte';
 		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
 		provides the greatest developing experience I've tasted so far. Also,
 		<span class="highlight">SEO</span> was a key feature for this project, and using semantic HTML and
-		all the good practices I could find, were my first priorities.
+		all the best practices I could find, were my first priorities.
 	</p>
 
 	<div class="screenshot-wrapper">
