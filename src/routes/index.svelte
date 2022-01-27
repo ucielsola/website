@@ -1,5 +1,6 @@
 <script>
-	import TechGrid from '$lib/components/techGrid.svelte';
+	import LinkIcon from '$lib/components/linkIcon.svelte';
+import TechGrid from '$lib/components/techGrid.svelte';
 </script>
 
 <section>
@@ -27,7 +28,7 @@
 			href="https://viset.app"
 			class="highlight"
 			target="_blank"
-			rel="noopener noreferrer nofollower"><img src="/images/link.png" alt="icon link"class="link-icon"/>Viset.app</a
+			rel="noopener noreferrer nofollower"><LinkIcon/>Viset.app</a
 		>, building an amazing app for meditation and deep relaxation using a powefull tech stack.
 		<br />
 		We work with the agile <span class="highlight">Scrum</span> model, and so far it's being a
@@ -48,10 +49,10 @@
 		My last freelance gig was with the amazing people of <a
 			href="https://ucihuen.com.ar" target="_blank"
 			class="highlight"
-			rel="noreferrer noopener"><img src="/images/link.png" alt="icon link"class="link-icon"/>Cabaña Ucihuen</a
+			rel="noreferrer noopener"><LinkIcon/>Cabaña Ucihuen</a
 		>, a beautiful rental cabin from the argentinian Patagonia. <br />
 		I've built their website using the almighty (and new boy in town)
-		<a href="https://kit.svelte.dev" class="highlight"><img src="/images/link.png" alt="icon link"class="link-icon"/>SvelteKit Framework</a>. It takes the
+		<a href="https://kit.svelte.dev" class="highlight"><LinkIcon/>SvelteKit Framework</a>. It takes the
 		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
 		provides the greatest developing experience I've tasted so far. Also,
 		<span class="highlight">SEO</span> was a key feature for this project, and using semantic HTML and

@@ -22,7 +22,7 @@ import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 <style>
 	.theme-switcher-container {
 		z-index: 100;
-		position: fixed;
+		position: absolute;
 		right: 1.5rem;
 		top: 1.5rem;
 	}
