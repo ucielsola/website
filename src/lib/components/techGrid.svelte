@@ -55,11 +55,10 @@
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: 1fr 1fr;
-		grid-gap: 1.5rem 0;
+		grid-gap: 1rem 0.5rem;
 		width: 100%;
 		margin-top: 3rem;
 		background: #f3f3f3;
-		padding: 1rem;
 		border-radius: 10px;
 	}
 
@@ -74,6 +73,8 @@
 			width: 75vw;
 			margin-right: 5rem;
 			margin-top: 0;
+			padding: 1rem;
+			grid-gap: 2rem 1.5rem;
 		}
 
 		img:hover {
