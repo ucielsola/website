@@ -7,7 +7,7 @@
 
 	let scrollY;
 	let scrollPos = 0;
-	let stoppedScrolling = true;
+	let scrollingUp
 
 	const debounce = (callback, wait) => {
 		let timer;
@@ -20,18 +20,18 @@
 	};
 
 	const debounceScroll = debounce(() => {
-		stoppedScrolling = true;
+		scrollingUp = false;
 	}, 300);
 
 	$: {
+		scrollingUp = scrollPos > scrollY
 		scrollPos = scrollY;
-		stoppedScrolling = false;
 		debounceScroll();
 	}
 </script>
 
 <svelte:window bind:scrollY />
-<div class="nav-container {stoppedScrolling ? 'show' : 'hide'}">
+<div class="nav-container {scrollingUp ? 'hide' : 'show'}">
 	<nav>
 		<a
 			title="Uciel Sola @ Linkedin"
@@ -90,7 +90,7 @@
 	}
 	.nav-container.hide {
 		bottom: -84px;
-		transition: bottom 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		transition: bottom 0.2s linear;
 	}
 	.icon {
 		width: 24px;
