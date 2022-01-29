@@ -3,7 +3,7 @@
 import TechGrid from '$lib/components/techGrid.svelte';
 </script>
 
-<section>
+<section class="greet">
 	<h2 class="highlight">hi! I'm</h2>
 	<h1 class="primary">Uciel Sola</h1>
 	<h2 class="text-right highlight">Web Dev.</h2>
@@ -77,6 +77,9 @@ import TechGrid from '$lib/components/techGrid.svelte';
 </section>
 
 <style>
+	.greet {
+		padding-top: 1rem;
+	}
 	h1 {
 		font-family: var(--title-font);
 		font-size: clamp(36px, 20vw, 15rem);

@@ -11,27 +11,37 @@
 	});
 </script>
 
-<button on:click={switchTheme} title="Switch Theme">
-	{#if dark}
-		<img src="/images/dark.png" alt="Theme Toggler" class="inverted"/>
-	{:else}
-		<img src="/images/light.png" alt="Theme Toggler"  />
-	{/if}
-</button>
+<button on:click={switchTheme} class={dark ? 'darkMode' : ''} title="Switch Theme" />
 
 <style>
 	button {
+		position: relative;
 		appearance: none;
-		background-color: #00000000;
+		background-color: var(--text-color);
 		border: none;
 		width: 3.5rem;
+		height: 1.5rem;
+		border-top-right-radius: 25px;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+		box-shadow: 0 0 15px var(--shadow-color);
 	}
-	img {
-		filter: drop-shadow(0px 5px 7px var(--shadow-color));
 
-		width: 100%;
+	button::after {
+		position: absolute;
+		top: 0.25rem;
+		left: 0.2rem;
+		content: '';
+		background: var(--text-contrast);
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		transition: left 0.3s var(--easing);
 	}
-	.inverted {
-		filter: invert(1);
+
+	button.darkMode::after {
+		left: 2.25rem;
+		transition: left 0.3s var(--easing);
 	}
 </style>

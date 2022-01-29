@@ -1,6 +1,6 @@
 <script>
 	import BottomBar from '$lib/components/bottomBar.svelte';
-import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
+	import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 </script>
 
 <svelte:head>
@@ -8,7 +8,7 @@ import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 </svelte:head>
 
 <div class="theme-switcher-container">
-	<ThemeSwitcher/>
+	<ThemeSwitcher />
 </div>
 
 <main>
@@ -23,8 +23,9 @@ import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 	.theme-switcher-container {
 		z-index: 100;
 		position: absolute;
-		right: 1.5rem;
-		top: 1.5rem;
+		right: 1rem;
+		top: 1rem;
+		display: grid;
 	}
 	main {
 		max-width: 1920px;
