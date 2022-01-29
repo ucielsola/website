@@ -8,7 +8,14 @@
 	svg {
 		fill: var(--secondary);
 		display: inline-block;
-		padding-inline: 0.5rem 0.5rem;
-        transform: scale(1.5);
-    }
+		padding-inline: 0.1rem;
+		transform: scale(0.5) translateY(15px);
+	}
+
+	@media (min-width: 1024px) {
+		svg {
+			transform: scale(1.5) translateY(1px);
+			padding-inline: 0.5rem 0.6rem;
+		}
+	}
 </style>
