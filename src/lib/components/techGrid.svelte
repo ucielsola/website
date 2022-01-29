@@ -56,10 +56,10 @@
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 1rem 0.5rem;
-		width: 100%;
-		margin-top: 3rem;
+		width: calc(100% + 6vw);
 		background: #f3f3f3;
-		border-radius: 10px;
+		margin: 1rem 0 0 -3vw;
+		padding: 0.5rem;
 	}
 
 	img {
@@ -71,8 +71,8 @@
 		.grid {
 			grid-gap: 2rem;
 			width: 75vw;
-			margin-right: 5rem;
-			margin-top: 0;
+			margin: 2rem 5rem 0 0;
+			border-radius: 5px;
 			padding: 1rem;
 			grid-gap: 2rem 1.5rem;
 		}
