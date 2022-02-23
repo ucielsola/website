@@ -3,10 +3,6 @@
 	import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
 </script>
 
-<svelte:head>
-	<title>Uciel Sola - Web Dev.</title>
-</svelte:head>
-
 <div class="theme-switcher-container">
 	<ThemeSwitcher />
 </div>
