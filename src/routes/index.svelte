@@ -16,7 +16,7 @@ import TechGrid from '$lib/components/techGrid.svelte';
 		>
 		to me since childhood. The 2020 pandemic pushed me to try and became a
 		<span class="highlight">Web Developer</span>, and I'm really happy with the incredibly wide
-		range of <span class="highlight">opportunitties</span> that the IT world can give.
+		range of <span class="highlight">opportunities</span> that the IT world can give.
 	</p>
 </section>
 
