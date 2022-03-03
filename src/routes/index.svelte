@@ -51,12 +51,12 @@ import TechGrid from '$lib/components/techGrid.svelte';
 			class="highlight"
 			rel="noreferrer noopener"><LinkIcon/>Cabaña Ucihuen</a
 		>, a beautiful rental cabin from the argentinian Patagonia. <br />
-		I've built their website using the almighty (and new boy in town)
-		<a href="https://kit.svelte.dev" class="highlight"><LinkIcon/>SvelteKit Framework</a>. It takes the
+		I've built their website using the new and very powerfull JavaScript framework, 
+		<a href="https://kit.svelte.dev" class="highlight"><LinkIcon/>SvelteKit</a>. It takes the
 		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
 		provides the greatest developing experience I've tasted so far. Also,
-		<span class="highlight">SEO</span> was a key feature for this project, and using semantic HTML and
-		all the best practices I could find, were my first priorities.
+		<span class="highlight">SEO</span> was a key feature for this project, so building a semantic HTML structure, setting the right <span class="highlight">meta-tags</span> and
+		following all the best practices were my first priorities.
 	</p>
 
 	<div class="screenshot-wrapper">
