@@ -19,7 +19,7 @@
 		appearance: none;
 		background-color: var(--text-color);
 		border: none;
-		width: 3.5rem;
+		width: 3rem;
 		height: 1.5rem;
 		border-top-right-radius: 25px;
 		border-top-left-radius: 25px;
@@ -41,7 +41,7 @@
 	}
 
 	button.darkMode::after {
-		left: 2.25rem;
+		left: 1.8rem;
 		transition: left 0.3s var(--easing);
 	}
 </style>
