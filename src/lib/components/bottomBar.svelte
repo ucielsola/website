@@ -53,7 +53,7 @@
 		</a>
 		<a
 			title="Download resumee"
-			href="https://drive.google.com/uc?export=download&id=1sTkkR9iviXOs9L2jIe9XTAdRMjYEisx8"
+			href="https://drive.google.com/uc?export=download&id=1Ar4wzQgpDIo5Kr4oLRAPuaRD_jwchILD"
 			download
 			rel="nofollow noopener"
 		>
