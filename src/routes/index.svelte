@@ -1,12 +1,12 @@
 <script>
 	import LinkIcon from '$lib/components/linkIcon.svelte';
-import TechGrid from '$lib/components/techGrid.svelte';
+	import TechGrid from '$lib/components/techGrid.svelte';
 </script>
 
 <section class="greet">
-	<h2 class="highlight">hi! I'm</h2>
+	<h2 class="highlight push-right">hi! I'm</h2>
 	<h1 class="primary">Uciel Sola</h1>
-	<h2 class="text-right highlight">Web Dev.</h2>
+	<h2 class="text-right highlight">Frontend Developer</h2>
 </section>
 
 <section>
@@ -20,15 +20,13 @@ import TechGrid from '$lib/components/techGrid.svelte';
 	</p>
 </section>
 
-
-
 <section class="row">
 	<p>
 		I'm currently working at <a
 			href="https://viset.app"
 			class="highlight"
 			target="_blank"
-			rel="noopener noreferrer nofollower"><LinkIcon/>Viset.app</a
+			rel="noopener noreferrer nofollower"><LinkIcon />Viset.app</a
 		>, building an amazing app for meditation and deep relaxation using a powefull tech stack.
 		<br />
 		We work with the agile <span class="highlight">Scrum</span> model, and so far it's being a
@@ -47,21 +45,28 @@ import TechGrid from '$lib/components/techGrid.svelte';
 <section>
 	<p>
 		My last freelance gig was with the amazing people of <a
-			href="https://ucihuen.com.ar" target="_blank"
+			href="https://ucihuen.com.ar"
+			target="_blank"
 			class="highlight"
-			rel="noreferrer noopener"><LinkIcon/>Cabaña Ucihuen</a
+			rel="noreferrer noopener"><LinkIcon />Cabaña Ucihuen</a
 		>, a beautiful rental cabin from the argentinian Patagonia. <br />
-		I've built their website using the new and very powerfull JavaScript framework, 
-		<a href="https://kit.svelte.dev" class="highlight"><LinkIcon/>SvelteKit</a>. It takes the
+		I've built their website using the new and very powerfull JavaScript framework,
+		<a href="https://kit.svelte.dev" class="highlight"><LinkIcon />SvelteKit</a>. It takes the
 		advantage of <span class="highlight">Server Side Rendering</span> and Client Side Routing, and
 		provides the greatest developing experience I've tasted so far. Also,
-		<span class="highlight">SEO</span> was a key feature for this project, so building a semantic HTML structure, setting the right <span class="highlight">meta-tags</span> and
-		following all the best practices were my first priorities.
+		<span class="highlight">SEO</span> was a key feature for this project, so building a semantic
+		HTML structure, setting the right <span class="highlight">meta-tags</span> and following all the
+		best practices were my first priorities.
 	</p>
 
 	<div class="screenshot-wrapper">
-	<a href="https://ucihuen.com.ar" target="_blank" rel="noreferrer noopener" title="Visit site">
-			<img src="/images/ucihuen.webp" alt="Ucihuen Screenshot" title="Visit site" class="ucihuen-screenshot" />
+		<a href="https://ucihuen.com.ar" target="_blank" rel="noreferrer noopener" title="Visit site">
+			<img
+				src="/images/ucihuen.webp"
+				alt="Ucihuen Screenshot"
+				title="Visit site"
+				class="ucihuen-screenshot"
+			/>
 		</a>
 	</div>
 </section>
@@ -94,6 +99,10 @@ import TechGrid from '$lib/components/techGrid.svelte';
 		max-width: 1080px;
 	}
 
+	.push-right {
+		padding-left: 12px;
+	}
+
 	.screenshots-wrapper {
 		display: flex;
 		margin-block: 4rem;
@@ -122,19 +131,18 @@ import TechGrid from '$lib/components/techGrid.svelte';
 		width: 100%;
 		transition: all 0.18s ease-in-out;
 		filter: drop-shadow(0px 5px 7px var(--shadow-color));
-
 	}
 
-    .screenshot-wrapper {
-        display: grid;
-        place-content: center;
-    }
+	.screenshot-wrapper {
+		display: grid;
+		place-content: center;
+	}
 
-    .ucihuen-screenshot {
-        margin-top: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 0 15px var(--shadow-color);
-    }
+	.ucihuen-screenshot {
+		margin-top: 1rem;
+		border-radius: 10px;
+		box-shadow: 0 0 15px var(--shadow-color);
+	}
 
 	@media (min-width: 400px) {
 		.image-wrapper.two {

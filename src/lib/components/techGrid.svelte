@@ -24,25 +24,19 @@
 		alt="Svelte Logo"
 		title="Svelte"
 	/>
+
 	<img
-		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-plain-wordmark.svg"
-		alt="VUEgo"
+		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+		alt="Figma Logo"
+		title="Figma"
 	/>
-	<img
-		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-		alt="React Logo"
-		title="Reactgo"
-	/>
+
 	<img
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg"
 		alt="Firebase Logo"
 		title="Firebase"
 	/>
-	<img
-		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
-		alt="WordPress Logo"
-		title="WordPress"
-	/>
+
 	<img
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 		alt="GraphQL Logo"
@@ -53,7 +47,7 @@
 <style>
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 1rem 0.5rem;
 		width: calc(100% + 6vw);
