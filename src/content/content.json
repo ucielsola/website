@@ -1,0 +1,45 @@
+{
+	"summary": {
+		"paragraphs": [
+			"Hi! I'm a frontend developer from Buenos Aires, Argentina with experience improving the user experience of mobile apps and developing internal solutions to streamline processes. I have worked on various projects, including a German startup, where I contributed to software development, participated in technical interviews, and designed new features. My technical expertise includes working with Typescript, HTML, CSS, and various frameworks and libraries. I'm a collaborative team player with experience in agile methodologies and design principles, dedicated to delivering high-quality work and continuously learning."
+		],
+		"highlights": ["frontend developer", "Typescript", "high-quality work"]
+	},
+	"experience": [
+		{
+			"title": "My work at Mercanis",
+			"company": "Mercanis",
+			"url": "https://mercanis.com/",
+			"position": 0,
+			"tags": ["TypeScript", "Jira", "Svelte", "Tailwind CSS", "ZOD"],
+			"date_label": "May 2022 - Present",
+			"paragraphs": [
+				"I've been working at Mercanis since May 2022 and it has been a great experience so far. The team is fantastic and it's definitely a great place to work. During my time here, my main responsibilities have been related to developing software that meets our clients' needs.",
+				"In addition, I've had the opportunity to work on designing new features and developing their implementations. This has allowed me to apply my technical skills to solve problems and add value to the company. Being involved in the product development process has given me a greater understanding of our product and how we can continue to improve it.",
+				"Another way I've contributed to the company is by participating in technical interviews to help identify talented candidates for our team. It's been rewarding to see the impact of my contributions in ensuring that we have a strong team and maintain high standards of quality."
+			],
+			"highlights": ["add value", "technical interviews", "high standards"]
+		},
+		{
+			"title": "My work at Viset",
+			"company": "Viset",
+			"url": "https://viset.app/",
+			"position": 1,
+			"tags": [
+				"Angular",
+				"TypeScript",
+				"Ionic",
+				"Capacitor",
+				"SCSS",
+				"Firebase"
+			],
+			"date_label": "Oct 2021 - Present",
+			"paragraphs": [
+				"I've been working at Viset since October 2021, and as the sole frontend developer for our mobile app, I have taken on a significant responsibility in maintaining and improving the user experience. Despite being the only frontend developer, I have been able to ensure that our app runs smoothly and provides a great experience for our users.",
+				"Our app has a solid base of over 200 daily users, and it's been exciting to see its growth and success. In addition to my frontend work, I've also developed solutions for internal use, such as admin panels for user and content management. These solutions have helped to streamline our internal processes and improve the efficiency of our team.",
+				"Overall, my experience at Viset has been rewarding, and I take pride in the work that I've done to help our app and team succeed."
+			],
+			"highlights": ["user experience", "improve the efficiency"]
+		}
+	]
+}

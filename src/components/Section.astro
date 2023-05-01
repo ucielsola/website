@@ -1,0 +1,62 @@
+---
+import Tag from "./Tag.astro";
+
+export interface Props {
+	title?: string;
+	company?: string;
+	url?: string;
+	tags?: string[];
+	dateLabel?: string;
+	paragraphs: string[];
+	highlights?: string[];
+}
+
+const { title, company, url, tags, dateLabel, paragraphs, highlights } =
+	Astro.props;
+
+function highlightWords(text: string, highlights: string[]) {
+	highlights.forEach((word) => {
+		const pattern = new RegExp(`\\b${word}\\b`, "gi");
+		text = text.replace(
+			pattern,
+			`<span class="text-buffy font-semibold">${word}</span>`
+		);
+	});
+	return text;
+}
+---
+
+<section class="flex flex-col gap-4">
+	{title && <h2 class="text-xl font-bold text-cullen">{title}</h2>}
+
+	{
+		company && dateLabel && (
+			<h3 class="text-vonCount-300">
+				{url ? (
+					<a
+						href={url}
+						rel="noreferrer"
+						target="_blank"
+						class="text-vonCount-100 font-semibold underline"
+						set:text={company}
+                        title={`Visit ${company} ➡️`}
+					/>
+				) : (
+					{ company }
+				)}
+				| <span class="text-vonCount-200">{dateLabel}</span>
+			</h3>
+		)
+	}
+
+	{(tags || []).map((tag) => Tag({ label: tag }))}
+
+	{
+		paragraphs.map((text) => (
+			<p
+				class="text-lg text-aro-300"
+				set:html={highlightWords(text, highlights || [])}
+			/>
+		))
+	}
+</section>

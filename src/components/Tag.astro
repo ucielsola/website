@@ -1,0 +1,18 @@
+---
+export interface Props {
+	label: string;
+	url?: string;
+}
+
+const { label, url } = Astro.props;
+---
+
+{
+	url ? (
+		<a href={url} rel="noreferre" target="_blank">
+			{label}
+		</a>
+	) : (
+		<span>{label}</span>
+	)
+}
