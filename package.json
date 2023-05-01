@@ -1,26 +1,25 @@
 {
-  "name": "ucielsola.com",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.2.1",
-    "prettier": "^2.4.1",
-    "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.44.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "svelte-icons": "^2.1.0"
-  }
+	"name": "@example/basics",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/svelte": "^2.1.1",
+		"@astrojs/tailwind": "^3.1.2",
+		"astro": "^2.3.3",
+		"astro-icon": "^0.8.0",
+		"svelte": "^3.58.0",
+		"tailwindcss": "^3.3.2"
+	},
+	"devDependencies": {
+		"prettier-plugin-astro": "^0.8.0",
+		"tailwind-dracula": "^1.1.0"
+	}
 }
