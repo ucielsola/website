@@ -50,7 +50,7 @@ function highlightWords(text: string, highlights: string[]) {
 			)
 		}
 
-		<div class="flex items-center gap-2">
+		<div class="flex items-center gap-2 flex-wrap">
 			{(tags || []).map((tag) => <Tag label={tag} />)}
 		</div>
 	</div>
