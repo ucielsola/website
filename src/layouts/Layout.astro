@@ -1,5 +1,5 @@
 ---
-import Pointer from '../components/Pointer.astro';
+import Pointer from '../components/Pointer.svelte';
 
 export interface Props {
 	title: string;
@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative h-full bg-nosferatu px-6 py-4">
-		<Pointer/>
+		<Pointer client:only/>
 		<slot />
 	</body>
 </html>
