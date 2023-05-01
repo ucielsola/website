@@ -3,7 +3,7 @@
 	import { writable } from "svelte/store";
 
 	const position = writable<{ x: number; y: number }>({ x: 0, y: 0 });
-	const correction = 40;
+	const correction = 32;
 
 	$: circlePosition = `left: ${$position.x - correction}px; top: ${
 		$position.y - correction
@@ -22,6 +22,6 @@
 </script>
 
 <div
-	class="absolute w-20 h-20 rounded-full bg-dracula-400/75 blur-3xl pointer-events-none"
+	class="absolute w-16 h-16 rounded-full bg-dracula-400/75 blur-3xl pointer-events-none"
 	style={circlePosition}
 />
