@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import content from "../content/content.json";
 import Section from "../components/Section.astro";
+// import Social from "../components/Social.astro";
 ---
 
 <Layout title="Uciel Sola - Frotend Developer">
-	<main class="flex flex-col gap-8 md:max-w-3xl">
+	<main class="relative flex flex-col gap-8 md:max-w-3xl h-full mb-20">
 
 		<h1 class="text-3xl font-bold text-cullen">
 			Uciel Sola - <span class="text-buffy text-xl">Frontend Developer</span>
@@ -27,8 +28,10 @@ import Section from "../components/Section.astro";
 					dateLabel={e.date_label}
 					paragraphs={e.paragraphs}
 					highlights={e.highlights}
+					tags={e.tags}
 				/>
 			))
 		}
 	</main>
+	<!-- <Social /> -->
 </Layout>
