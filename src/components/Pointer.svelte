@@ -22,6 +22,6 @@
 </script>
 
 <div
-	class="absolute w-20 h-20 rounded-full bg-dracula-200/80 blur-3xl pointer-events-none"
+	class="absolute w-20 h-20 rounded-full bg-dracula-400/75 blur-3xl pointer-events-none"
 	style={circlePosition}
 />
