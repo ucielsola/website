@@ -6,17 +6,36 @@ import Section from "../components/Section.astro";
 ---
 
 <Layout title="Uciel Sola - Frotend Developer">
-	<main class="relative flex flex-col gap-8 md:max-w-3xl h-full mb-20">
-
+	<main class="relative flex flex-col gap-8 lg:max-w-3xl h-full mb-20">
 		<h1 class="text-3xl font-bold text-cullen">
 			Uciel Sola - <span class="text-buffy text-xl">Frontend Developer</span>
 		</h1>
 
 		<div class="pb-10">
 			<Section
-			paragraphs={content.summary.paragraphs}
-			highlights={content.summary.highlights}
-		/>
+				paragraphs={content.summary.paragraphs}
+				highlights={content.summary.highlights}
+			/>
+
+			<p class="text-sm text-aro-300 pt-8">
+				We can get in touch via <a
+					href="https://linkedin.com/in/ucielsola"
+					rel="noreferrer noopener"
+					target="_blank"
+					title="Find me at LinkedIn"
+					class="text-vonCount-100 font-semibold underline">LinkedIn</a
+				>.
+			</p>
+
+			<p class="text-sm text-aro-300">
+				You can also find more about me on this site: <a
+					href="https://mnf.red/ucielsola"
+					rel="noreferrer noopener"
+					target="_blank"
+					title="Find me at Manfred.com"
+					class="text-vonCount-100 font-semibold underline">mnf.red/ucielsola</a
+				>
+			</p>
 		</div>
 
 		{
