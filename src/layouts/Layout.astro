@@ -1,5 +1,5 @@
 ---
-import Pointer from '../components/Pointer.svelte';
+import Pointer from "../components/Pointer.svelte";
 
 export interface Props {
 	title: string;
@@ -16,15 +16,51 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<meta
+			name="description"
+			content="I'm a frontend developer from Buenos Aires (Argentina), experienced in improving user experience and developing internal solutions. Collaborative team player with expertise in Typescript, HTML, CSS, and various frameworks and libraries."
+		/>
+		<meta
+			name="keywords"
+			content="frontend developer, Buenos Aires, Argentina, user experience, mobile apps, internal solutions, software development, technical interviews, new features, Typescript, HTML, CSS, frameworks, libraries, agile methodologies, design principles, high-quality work, continuous learning"
+		/>
+		<meta name="author" content="Uciel Sola" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="Frontend Developer | Uciel Sola" />
+		<meta
+			property="og:description"
+			content="I'm a frontend developer from Buenos Aires (Argentina), experienced in improving user experience and developing internal solutions. Collaborative team player with expertise in Typescript, HTML, CSS, and various frameworks and libraries."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mnf.red/ucielsola" />
+		<meta
+			property="og:image"
+			content="https://ucielsola.com/images/uciel_sola.png"
+		/>
+		<meta property="og:image:alt" content="Uciel Sola" />
+		<meta property="og:site_name" content="Your Website" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@ucielsola" />
+		<meta name="twitter:title" content="Frontend Developer | Uciel Sola" />
+		<meta
+			name="twitter:description"
+			content="I'm a frontend developer from Buenos Aires (Argentina), experienced in improving user experience and developing internal solutions. Collaborative team player with expertise in Typescript, HTML, CSS, and various frameworks and libraries."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://ucielsola.com/images/uciel_sola.png"
+		/>
+		<meta name="twitter:image:alt" content="Uciel Sola" />
 	</head>
 	<body class="h-full bg-nosferatu px-4 py-4">
-		<Pointer client:only/>
+		<Pointer client:only />
 		<slot />
 	</body>
 </html>
-<style is:global> 
+<style is:global>
 	html {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
