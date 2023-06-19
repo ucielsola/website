@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -32,11 +32,14 @@ const { title } = Astro.props;
 			href="/favicon-16x16.png"
 		/>
 		<link rel="manifest" href="/site.webmanifest" />
-		
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
-		<meta name="description" content="Frontend developer from Buenos Aires specializing in TypeScript, creating engaging web experiences with HTML, CSS, and frameworks."  />
+		<meta
+			name="description"
+			content="Frontend developer from Buenos Aires specializing in TypeScript, creating engaging web experiences with HTML, CSS, and frameworks."
+		/>
 		<meta name="author" content="Uciel Sola" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta property="og:title" content="Frontend Developer | Uciel Sola" />
@@ -65,10 +68,14 @@ const { title } = Astro.props;
 		/>
 		<meta name="twitter:image:alt" content="Uciel Sola" />
 	</head>
-	<body class="h-full bg-nosferatu px-4 py-4">
+	<body class="bg-nosferatu my-4 overflow-x-hidden">
 		<Pointer client:only />
-		<slot />
+		<slot name="content" />
 	</body>
+
+	<footer class="border-t border-aro-800 mt-8">
+		<slot name="footer" />
+	</footer>
 </html>
 <style is:global>
 	html {
