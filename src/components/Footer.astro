@@ -2,16 +2,23 @@
 import { Icon } from "astro-icon";
 ---
 
-<ul class="flex items-center justify-center gap-8 pt-2">
+<nav class="flex items-center justify-center gap-8 pt-2">
     <a
         href="https://github.com/ucielsola"
         rel="noopener noreferrer"
-        target="_blank"><Icon name="bi:github" class="w-6 h-6 text-buffy" /></a
+        target="_blank"
+        aria-label="Uciel Sola on GitHub"
+        title="Find me on GitHub"
     >
+        <Icon name="bi:github" class="w-6 h-6 text-buffy" />
+    </a>
     <a
         href="https://linkedin.com/in/ucielsola"
         rel="noopener noreferrer"
         target="_blank"
-        ><Icon name="bi:linkedin" class="w-6 h-6 text-buffy" /></a
+        aria-label="Uciel Sola on Linkedin"
+        title="Find me on Linkedin"
     >
+        <Icon name="bi:linkedin" class="w-6 h-6 text-buffy" />
+    </a>
 </ul>
