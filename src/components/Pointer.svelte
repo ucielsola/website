@@ -1,25 +1,32 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-	import { writable } from "svelte/store";
-
-	const position = writable<{ x: number; y: number }>({ x: 0, y: 0 });
-	const correction = 32;
+	import { tweened } from "svelte/motion";
+	import { cubicOut } from "svelte/easing";
 
 	$: circlePosition = `left: ${$position.x - correction}px; top: ${
 		$position.y - correction
 	}px;`;
 
+	const correction = 32;
+	let scrollY = 0;
+	let scrollX = 0;
+
+	const position = tweened(
+		{ x: 0, y: 0 },
+		{
+			duration: 300,
+			easing: cubicOut,
+		}
+	);
+
 	const handleMouseMove = (e: MouseEvent) => {
 		position.set({
-			x: e.clientX + window.scrollX,
-			y: e.clientY + window.scrollY,
+			x: e.clientX + scrollX,
+			y: e.clientY + scrollY,
 		});
 	};
-
-	onMount(() => {
-		window.addEventListener("mousemove", handleMouseMove);
-	});
 </script>
+
+<svelte:window bind:scrollY bind:scrollX on:mousemove={handleMouseMove} />
 
 <div
 	class="absolute w-16 h-16 rounded-full bg-dracula-400/75 blur-3xl pointer-events-none"
