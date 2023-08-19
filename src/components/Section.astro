@@ -58,7 +58,7 @@ function highlightWords(text: string, highlights: string[]) {
 	{
 		paragraphs.map((text) => (
 			<p
-				class="text-lg text-aro-300"
+				class="text-lg text-aro-300 break-normal mr-8"
 				set:html={highlightWords(text, highlights || [])}
 			/>
 		))
