@@ -1,30 +1,29 @@
 ---
-import { Icon } from "astro-icon";
+import Link from "./Link.astro";
+
+const links = [
+	{
+		href:"https://music-player.ucielsola.me",
+		icon: "bi:music-note-beamed",
+		text: "Music Player"
+	},
+	{
+		href:"https://lmot.ar",
+		icon: "bi:music-note-beamed",
+		text: "Live Music Program"
+	},
+	{
+		href:"https://ucihuen.com.ar",
+		icon: "bi:house",
+		text: "Cabañas Ucihuen"
+	}
+]
 ---
 
 <aside class="border-l px-8 w-full h-full flex flex-col gap-8 py-4 ml-2 md:ml-0 md:mb-48 min-w-fit">
 	<h3 class="text-lg font-bold text-cullen">Side projects</h3>
 
 	<div class="flex flex-col gap-4">
-		<a
-			href="https://sud.ucielsola.com"
-			target="_blank"
-			rel="noreferrer"
-			class="flex items-center gap-2 text-buffy-200"
-			><Icon
-				name="bi:music-note-beamed"
-				class="w-6 h-6 text-buffy hover:text-vonCount-100 active:text-green-300 transition-colors duration-150"
-			/> Music Player (w/ Sveltekit)</a
-		>
-		<a
-			href="https://ucihuen.com.ar"
-			target="_blank"
-			rel="noreferrer"
-			class="flex items-center gap-2 text-buffy-200"
-			><Icon
-				name="bi:house"
-				class="w-6 h-6 text-buffy hover:text-vonCount-100 active:text-green-300 transition-colors duration-150"
-			/> Cabañas Ucihuen (w/ Sveltekit)</a
-		>
+		{links.map(l=><Link href={l.href} text={l.text} icon={l.icon}/>)}
 	</div>
 </aside>
