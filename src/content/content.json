@@ -1,9 +1,9 @@
 {
 	"summary": {
 		"paragraphs": [
-			"Hi! I'm a frontend developer from Buenos Aires (Argentina), with experience improving the user experience of mobile apps and developing internal solutions to streamline processes. I have worked on various projects, including a German startup, where I contributed to software development, participated in technical interviews, and designed new features. My technical expertise includes working with Typescript, HTML, CSS, and various frameworks and libraries. I'm a collaborative team player with experience in agile methodologies and design principles, dedicated to delivering high-quality work and continuously learning."
+			"Frontend developer from Buenos Aires with a proven track record of solving user experience challenges. My expertise in TypeScript, HTML, CSS, and a range of frontend frameworks allows me to quickly adapt to diverse project needs. I've streamlined workflows, driven product improvements, and actively participated in building a high-caliber team. My dedication to continuous learning ensures I deliver impactful solutions."
 		],
-		"highlights": ["frontend developer", "Typescript", "high-quality work"]
+		"highlights": ["Frontend developer", "Typescript", "impactful solutions"]
 	},
 	"experience": [
 		{
@@ -14,9 +14,8 @@
 			"tags": ["TypeScript", "Jira", "Svelte", "Tailwind CSS", "ZOD"],
 			"date_label": "May 2022 - Present",
 			"paragraphs": [
-				"I've been working at Mercanis since May 2022 and it has been a great experience so far. The team is fantastic and it's definitely a great place to work. During my time here, my main responsibilities have been related to developing software that meets our clients' needs.",
-				"In addition, I've had the opportunity to work on designing new features and developing their implementations. This has allowed me to apply my technical skills to solve problems and add value to the company. Being involved in the product development process has given me a greater understanding of our product and how we can continue to improve it.",
-				"Another way I've contributed to the company is by participating in technical interviews to help identify talented candidates for our team. It's been rewarding to see the impact of my contributions in ensuring that we have a strong team and maintain high standards of quality."
+				"Since joining Mercanis in May 2022, I've thrived in its collaborative and dynamic environment.  My work focuses on crafting client-driven software solutions. One highlight was designing and implementing a new Backoffice application that directly improved the day-to-day for the development and product teams. This deepened my product understanding and let me contribute to its ongoing success.",
+				"Beyond development, I'm proud to be a part of Mercanis' strong team culture. I enjoy actively participating in technical interviews, helping us source top talent.  This experience reinforces my commitment to high standards and has broadened my own perspectives on effective development."
 			],
 			"highlights": ["add value", "technical interviews", "high standards"]
 		},
@@ -35,11 +34,10 @@
 			],
 			"date_label": "Oct 2021 - Present",
 			"paragraphs": [
-				"I've been working at Viset since October 2021, and as the sole frontend developer for our mobile app, I have taken on a significant responsibility in maintaining and improving the user experience. Despite being the only frontend developer, I have been able to ensure that our app runs smoothly and provides a great experience for our users.",
-				"Our app has a solid base of over 200 daily users, and it's been exciting to see its growth and success. In addition to my frontend work, I've also developed solutions for internal use, such as admin panels for user and content management. These solutions have helped to streamline our internal processes and improve the efficiency of our team.",
-				"Overall, my experience at Viset has been rewarding, and I take pride in the work that I've done to help our app and team succeed."
+				"As the sole frontend developer for a mobile app with over 200 daily users, I've owned enhancing the user experience. From streamlining navigation to flawless audio streaming, my work has contributed to our app's success.  My adaptability as a solo developer has ensured a smooth-running app while also creating internal tools like admin panels, boosting our team's efficiency.",
+				"The experience at Viset has been incredibly rewarding. My passion for impactful development is reflected in my ability to juggle UX improvements with internal solutions that support our team's growth."
 			],
-			"highlights": ["user experience", "improve the efficiency"]
+			"highlights": ["user experience", "efficiency", "boosting"]
 		}
 	]
 }
