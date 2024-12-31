@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/setup",
+      "destination": "https://raw.githubusercontent.com/ucielsola/dotfiles/refs/heads/main/setup.sh",
+      "permanent": true
+    }
+  ]
+}
