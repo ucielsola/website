@@ -13,7 +13,9 @@
 		e.preventDefault();
 		chat.sendMessage(message);
 		formEl.reset();
-		message = '';
+		setTimeout(() => {
+			message = '';
+		}, 50);
 	};
 	$inspect(disabled);
 </script>

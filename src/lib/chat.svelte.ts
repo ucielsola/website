@@ -78,10 +78,10 @@ class Chat {
 		this._aiMessageBuffer = '';
 
 		try {
-		  if (this.lastMessageAbortController) {
-        this.lastMessageAbortController.abort();
-      }
-      this.lastMessageAbortController = new AbortController();
+			if (this.lastMessageAbortController) {
+				this.lastMessageAbortController.abort();
+			}
+			this.lastMessageAbortController = new AbortController();
 			await fetchEventSource(Chat.URL, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
