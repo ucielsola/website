@@ -51,6 +51,7 @@ class Chat {
 	private _messages: Message[] = $state([]);
 	private _isAiTyping = false;
 	private _aiMessageBuffer: string = '';
+	private lastMessageAbortController: AbortController | null = null;
 
 	constructor() {
 		this._simulateAiIntroduction();
@@ -77,11 +78,16 @@ class Chat {
 		this._aiMessageBuffer = '';
 
 		try {
+		  if (this.lastMessageAbortController) {
+        this.lastMessageAbortController.abort();
+      }
+      this.lastMessageAbortController = new AbortController();
 			await fetchEventSource(Chat.URL, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ prompt: message }),
-				onmessage: (e: EventSourceMessage) => this.onAiMessage(e)
+				onmessage: (e: EventSourceMessage) => this.onAiMessage(e),
+				signal: this.lastMessageAbortController.signal
 			});
 		} catch (error) {
 			console.error('Error fetching AI response:', error);
