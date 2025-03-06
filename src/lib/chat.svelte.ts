@@ -10,12 +10,42 @@ class Chat {
 	private static readonly LOCAL = 'http://localhost:8000/stream';
 	private static readonly MessageEnd = '[DONE]';
 
-	public conversationStarters = [
-		'Who is Uciel?',
-		'What are his skills?',
-		'Work experience?',
-		'Projects overview?',
-		'How to contact him?'
+	public conversationStarters: {
+		label: string;
+		question: string;
+	}[] = [
+		{
+			label: 'About Uciel',
+			question: 'Can you give me a brief introduction about Uciel?'
+		},
+		{
+			label: 'Skills',
+			question: 'What technical skills does Uciel have?'
+		},
+		{
+			label: 'Experience',
+			question: "What's Uciel's professional experience?"
+		},
+		{
+			label: 'Projects',
+			question: 'Can you summarize some projects Uciel has worked on?'
+		},
+		{
+			label: 'Contact',
+			question: 'How can I get in touch with Uciel?'
+		},
+		{
+			label: 'Interests',
+			question: "What are Uciel's professional interests or focus areas?"
+		},
+		{
+			label: 'Languages',
+			question: 'Which languages does Uciel speak?'
+		},
+		{
+			label: 'Location',
+			question: 'Where is Uciel currently based?'
+		}
 	];
 
 	private _messages: Message[] = $state([]);
