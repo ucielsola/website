@@ -18,8 +18,6 @@
 </script>
 
 <div class="flex h-full flex-col gap-6 overflow-y-auto px-6 pb-12" bind:this={messageList}>
-	<h2 class="text-xl">👋 Hi there!</h2>
-
 	{#each messages as message, i (i)}
 		{#if message.role === 'ai'}
 			<AiMessage message={message.text} />
