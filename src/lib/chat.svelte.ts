@@ -136,6 +136,9 @@ class Chat {
 			}
 		];
 
+		const wordsDelay = 30;
+		const sentenceDelay = 250;
+
 		for (const message of introMessages) {
 			this._aiMessageBuffer = '';
 			this.appendMessage({ role: 'ai', text: '' });
@@ -145,10 +148,10 @@ class Chat {
 			for (const word of words) {
 				this._aiMessageBuffer += word + ' ';
 				this._messages[this._messages.length - 1].text = this._aiMessageBuffer.trim();
-				await new Promise((resolve) => setTimeout(resolve, 50));
+				await new Promise((resolve) => setTimeout(resolve, wordsDelay));
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 500));
+			await new Promise((resolve) => setTimeout(resolve, sentenceDelay));
 		}
 	}
 }
