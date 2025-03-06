@@ -24,7 +24,7 @@
 	class="relative flex w-full items-center justify-center pt-12"
 >
 	<div class="no-scrollbar absolute top-2 w-full overflow-x-auto">
-		<div class="mx-2 flex w-fit items-center gap-4">
+		<div class="mx-6 flex w-fit items-center gap-4">
 			{#each chat.conversationStarters as message}
 				<Pill text={message} onClick={() => chat.sendMessage(message)} />
 			{/each}
