@@ -37,6 +37,10 @@ a:hover {
 	@apply text-primary;
 }
 
+ul li {
+	@apply ml-8 list-disc;
+}
+
 @layer utilities {
 	/* Hide scrollbar for Chrome, Safari and Opera */
 	.no-scrollbar::-webkit-scrollbar {
