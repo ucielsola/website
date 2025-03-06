@@ -25,8 +25,8 @@
 >
 	<div class="no-scrollbar absolute top-2 w-full overflow-x-auto">
 		<div class="mx-6 flex w-fit items-center gap-4">
-			{#each chat.conversationStarters as message}
-				<Pill text={message} onClick={() => chat.sendMessage(message)} />
+			{#each chat.conversationStarters as starter}
+				<Pill text={starter.label} onClick={() => chat.sendMessage(starter.question)} />
 			{/each}
 		</div>
 	</div>
