@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-    <title>Uciel Sola</title>
+	<title>Uciel Sola</title>
 </svelte:head>
 
 <div class="relative flex h-screen w-screen flex-col gap-4 overflow-hidden pt-4">
