@@ -6,8 +6,7 @@ type Message = {
 };
 
 class Chat {
-	private static readonly URL = 'https://website-api-46ls.onrender.com/stream';
-	private static readonly LOCAL = 'http://localhost:8000/stream';
+	private static readonly RAILWAY = 'https://ucielsola.up.railway.app/stream';
 	private static readonly MessageEnd = '[DONE]';
 
 	public conversationStarters: {
@@ -82,7 +81,7 @@ class Chat {
 				this.lastMessageAbortController.abort();
 			}
 			this.lastMessageAbortController = new AbortController();
-			await fetchEventSource(Chat.URL, {
+			await fetchEventSource(Chat.RAILWAY, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ prompt: message }),
