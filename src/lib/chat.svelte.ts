@@ -7,6 +7,7 @@ type Message = {
 
 class Chat {
 	private static readonly RAILWAY = 'https://ucielsola.up.railway.app/stream';
+	private static readonly LOCAL = 'http://localhost:8000/stream';
 	private static readonly MessageEnd = '[DONE]';
 
 	public conversationStarters: {

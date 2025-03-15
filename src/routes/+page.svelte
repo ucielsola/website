@@ -9,7 +9,7 @@
 	<title>Uciel Sola</title>
 </svelte:head>
 
-<div class="relative flex h-screen w-screen flex-col gap-4 overflow-hidden pt-4">
+<div class="relative flex h-dvh w-dvw flex-col gap-4 overflow-hidden pt-4">
 	<div class="flex items-center justify-between px-6">
 		<h1 class="absolute top-0 text-white/0">Uciel Sola</h1>
 		<h2 class="text-xl">👋 Hi there!</h2>
