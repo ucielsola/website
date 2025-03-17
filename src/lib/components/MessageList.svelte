@@ -3,6 +3,7 @@
 	import UserMessage from '$lib/components/UserMessage.svelte';
 
 	import { chat } from '$lib/chat.svelte';
+	import { fade } from 'svelte/transition';
 
 	let messageList: HTMLDivElement;
 	let messages = $derived(chat.messages);
@@ -17,12 +18,14 @@
 	});
 </script>
 
-<div class="flex h-full flex-col gap-6 overflow-y-auto px-6 pb-12" bind:this={messageList}>
+<div class="flex h-full flex-col gap-3 overflow-y-auto px-6 pb-12 pt-3" bind:this={messageList}>
 	{#each messages as message, i (i)}
-		{#if message.role === 'ai'}
+		<div in:fade|local>
+			{#if message.role === 'ai'}
 			<AiMessage message={message.text} />
 		{:else}
 			<UserMessage message={message.text} />
 		{/if}
+		</div>
 	{/each}
 </div>

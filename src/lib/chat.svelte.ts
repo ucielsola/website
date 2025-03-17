@@ -90,7 +90,6 @@ class Chat {
 				signal: this.lastMessageAbortController.signal
 			});
 		} catch (error) {
-			console.error('Error fetching AI response:', error);
 			this.appendMessage({
 				role: 'ai',
 				text: 'Error: Failed to get response from AI.'
@@ -118,6 +117,10 @@ class Chat {
 
 	private async _simulateAiIntroduction(): Promise<void> {
 		const introMessages: Message[] = [
+			{
+				role: 'ai',
+				text: "👋🏼 Hi there!"
+			},
 			{
 				role: 'ai',
 				text: "I'm an AI chatbot trained to answer your questions about **Uciel Sola**—his work, experience, and projects."

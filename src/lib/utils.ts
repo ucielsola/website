@@ -15,7 +15,5 @@ export function errorHandler(error: unknown) {
 
 	output = JSON.stringify(error);
 
-	console.log(output);
-
 	return '';
 }
