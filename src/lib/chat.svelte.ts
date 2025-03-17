@@ -112,6 +112,7 @@ class Chat {
 	}
 
 	private appendMessage(message: Message): void {
+		this._messages = this._messages.filter(m => m.role === 'ai' ? m.text.length > 0 : true)
 		this._messages.push(message);
 	}
 
