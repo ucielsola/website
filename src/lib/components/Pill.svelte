@@ -5,7 +5,7 @@
 <button
 	type="button"
 	onclick={onClick}
-	class="border-primary bg-secondary hover:bg-accent flex cursor-pointer items-center justify-center rounded-2xl border px-3 py-1 transition-colors"
+	class="btn btn-xs btn-secondary dark:btn-primary"
 >
 	<span class="text-xs whitespace-nowrap text-white">
 		{text}

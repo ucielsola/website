@@ -9,7 +9,7 @@
 	let disabled = $derived(chat.isAiTyping);
 
 	const handleSubmit = (e: SubmitEvent) => {
-		if (disabled) return;
+		if (disabled || message.length === 0) return;
 		e.preventDefault();
 		chat.sendMessage(message);
 		formEl.reset();
@@ -23,9 +23,9 @@
 <form
 	onsubmit={handleSubmit}
 	bind:this={formEl}
-	class="relative flex w-full items-center justify-center pt-12"
+	class="relative flex w-full items-center justify-center pt-14 border-t border-secondary"
 >
-	<div class="no-scrollbar absolute top-2 w-full overflow-x-auto">
+	<div class="no-scrollbar absolute top-4 w-full overflow-x-auto">
 		<div class="mx-6 flex w-fit items-center gap-4">
 			{#each chat.conversationStarters as starter}
 				<Pill text={starter.label} onClick={() => chat.sendMessage(starter.question)} />
@@ -35,7 +35,7 @@
 
 	<div class="flex w-full items-center gap-2 px-6 pb-6">
 		<textarea
-			class="text-secondary placeholder:text-secondary/50 block w-full resize-none rounded-lg border-0 bg-white p-2
+			class="textarea w-full resize-none rounded-lg bg-base-100 p-2
 			disabled:pointer-events-none disabled:opacity-30
 			"
 			{rows}
@@ -47,8 +47,10 @@
 		<button
 			type="submit"
 			disabled={disabled ? true : null}
-			class="bg-accent flex aspect-square items-center justify-center rounded-full p-1 text-xs disabled:pointer-events-none disabled:opacity-30"
-			><SendIcon /></button
+			class="btn btn-circle btn-secondary dark:btn-primary disabled:pointer-events-none disabled:opacity-30"
+			>
+			<span class="text-white"><SendIcon /></span>
+			</button
 		>
 	</div>
 </form>
