@@ -18,7 +18,7 @@
 	});
 </script>
 
-<div class="flex h-full flex-col gap-3 overflow-y-auto px-6 pb-12 pt-3" bind:this={messageList}>
+<div class="flex h-full flex-col gap-2 overflow-y-auto px-6 pb-12 pt-3" bind:this={messageList}>
 	{#each messages as message, i (i)}
 		<div in:fade|local>
 			{#if message.role === 'ai'}

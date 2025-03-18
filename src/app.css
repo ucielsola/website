@@ -14,6 +14,10 @@ body {
 	font-family: 'Garamond', Georgia, serif;
 }
 
+a:not(.btn) {
+	@apply btn btn-xs;
+}
+
 @layer utilities {
 	/* Hide scrollbar for Chrome, Safari and Opera */
 	.no-scrollbar::-webkit-scrollbar {
