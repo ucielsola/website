@@ -128,7 +128,7 @@ class Chat {
 			},
 			{
 				role: 'ai',
-				text: "If you're looking for his resume, you can download it here: [Download Resume](https://drive.google.com/uc?export=download&id=1nYAqqxgsLVyiRsoOPFJx4CsZ-oDnDVi-)."
+				text: "If you're looking for his resume, you can download it here: [Download Resume](https://drive.google.com/uc?export=download&id=1hKvdTHJRAVUHa4-iktfUClCwZy0GiPkT)."
 			},
 			{
 				role: 'ai',
