@@ -1,8 +1,8 @@
 import { fetchEventSource, type EventSourceMessage } from '@microsoft/fetch-event-source';
 
 type Message = {
-	role: 'user' | 'ai';
-	text: string;
+	role: 'user' | 'assistant';
+	content: string;
 };
 
 class Chat {
@@ -69,13 +69,8 @@ class Chat {
 		this._isAiTyping = true;
 		this.appendMessage({
 			role: 'user',
-			text: message
+			content: message
 		});
-		this.appendMessage({
-			role: 'ai',
-			text: ''
-		});
-		this._aiMessageBuffer = '';
 
 		try {
 			if (this.lastMessageAbortController) {
@@ -85,14 +80,20 @@ class Chat {
 			await fetchEventSource(Chat.RAILWAY, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ prompt: message }),
+				body: JSON.stringify(this._messages),
 				onmessage: (e: EventSourceMessage) => this.onAiMessage(e),
 				signal: this.lastMessageAbortController.signal
 			});
+
+			this.appendMessage({
+				role: 'assistant',
+				content: ''
+			});
+			this._aiMessageBuffer = '';
 		} catch (error) {
 			this.appendMessage({
-				role: 'ai',
-				text: 'Error: Failed to get response from AI.'
+				role: 'assistant',
+				content: 'Error: Failed to get response from AI.'
 			});
 			this._isAiTyping = false;
 		}
@@ -103,40 +104,46 @@ class Chat {
 
 		if (e.data === Chat.MessageEnd) {
 			this._isAiTyping = false;
-			lastMessage.text = this._aiMessageBuffer.trim();
+			lastMessage.content = this._aiMessageBuffer.trim();
 			return;
 		}
 
 		this._aiMessageBuffer += e.data.replace(/"/g, '');
-		lastMessage.text = this._aiMessageBuffer.trim();
+		lastMessage.content = this._aiMessageBuffer.trim();
 	}
 
 	private appendMessage(message: Message): void {
-		this._messages = this._messages.filter(m => m.role === 'ai' ? m.text.length > 0 : true)
+		this._messages = this._messages.filter((m) =>
+			m.role === 'assistant' ? m.content.length > 0 : true
+		);
 		this._messages.push(message);
 	}
 
 	private async _simulateAiIntroduction(): Promise<void> {
 		const introMessages: Message[] = [
 			{
-				role: 'ai',
-				text: "👋🏼 Hi there!"
+				role: 'assistant',
+				content: '👋🏼 Hi there!'
 			},
 			{
-				role: 'ai',
-				text: "I'm an AI chatbot trained to answer your questions about **Uciel Sola**—his work, experience, and projects."
+				role: 'assistant',
+				content:
+					"I'm an AI chatbot trained to answer your questions about **Uciel Sola**—his work, experience, and projects."
 			},
 			{
-				role: 'ai',
-				text: "If you're looking for his resume, you can download it here: [Download Resume](https://ucielsola.dev/ucielsola.pdf)."
+				role: 'assistant',
+				content:
+					"If you're looking for his resume, you can download it here: [Download Resume](https://ucielsola.dev/ucielsola.pdf)."
 			},
 			{
-				role: 'ai',
-				text: 'Want to reach out? You can connect via [LinkedIn](https://LinkedIn.com/in/ucielsola) or send an email to [solauciel@gmail.com](mailto:solauciel@gmail.com)'
+				role: 'assistant',
+				content:
+					'Want to reach out? You can connect via [LinkedIn](https://LinkedIn.com/in/ucielsola) or send an email to [solauciel@gmail.com](mailto:solauciel@gmail.com)'
 			},
 			{
-				role: 'ai',
-				text: 'You can also check out some of his side projects on [GitHub](https://Github.com/ucielsola)'
+				role: 'assistant',
+				content:
+					'You can also check out some of his side projects on [GitHub](https://Github.com/ucielsola)'
 			}
 		];
 
@@ -145,13 +152,13 @@ class Chat {
 
 		for (const message of introMessages) {
 			this._aiMessageBuffer = '';
-			this.appendMessage({ role: 'ai', text: '' });
+			this.appendMessage({ role: 'assistant', content: '' });
 
-			const words = message.text.split(' ');
+			const words = message.content.split(' ');
 
 			for (const word of words) {
 				this._aiMessageBuffer += word + ' ';
-				this._messages[this._messages.length - 1].text = this._aiMessageBuffer.trim();
+				this._messages[this._messages.length - 1].content = this._aiMessageBuffer.trim();
 				await new Promise((resolve) => setTimeout(resolve, wordsDelay));
 			}
 
