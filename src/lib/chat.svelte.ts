@@ -72,6 +72,13 @@ class Chat {
 			content: message
 		});
 
+		this.appendMessage({
+			role: 'assistant',
+			content: ''
+		});
+
+		this._aiMessageBuffer = '';
+
 		try {
 			if (this.lastMessageAbortController) {
 				this.lastMessageAbortController.abort();
@@ -80,16 +87,12 @@ class Chat {
 			await fetchEventSource(Chat.RAILWAY, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(this._messages),
+				body: JSON.stringify(this._messages.filter(m => m.content.length > 0)),
 				onmessage: (e: EventSourceMessage) => this.onAiMessage(e),
 				signal: this.lastMessageAbortController.signal
 			});
 
-			this.appendMessage({
-				role: 'assistant',
-				content: ''
-			});
-			this._aiMessageBuffer = '';
+		
 		} catch (error) {
 			this.appendMessage({
 				role: 'assistant',
