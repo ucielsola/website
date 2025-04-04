@@ -1,13 +1,10 @@
-import { fetchEventSource, type EventSourceMessage } from '@microsoft/fetch-event-source';
+import { sendMessages } from '$lib/api/chat';
+import { introMessages } from '$lib/utils';
 
-type Message = {
-	role: 'user' | 'assistant';
-	content: string;
-};
+import type { Message } from '$lib/types';
+import type { EventSourceMessage } from '@microsoft/fetch-event-source';
 
 class Chat {
-	private static readonly RAILWAY = 'https://ucielsola.up.railway.app/stream';
-	private static readonly LOCAL = 'http://localhost:8000/stream';
 	private static readonly MessageEnd = '[DONE]';
 
 	public conversationStarters: {
@@ -84,15 +81,12 @@ class Chat {
 				this.lastMessageAbortController.abort();
 			}
 			this.lastMessageAbortController = new AbortController();
-			await fetchEventSource(Chat.RAILWAY, {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(this._messages.filter(m => m.content.length > 0)),
-				onmessage: (e: EventSourceMessage) => this.onAiMessage(e),
-				signal: this.lastMessageAbortController.signal
-			});
 
-		
+			sendMessages(
+				this._messages,
+				this.lastMessageAbortController.signal,
+				(e: EventSourceMessage) => this.onAiMessage(e)
+			);
 		} catch (error) {
 			this.appendMessage({
 				role: 'assistant',
@@ -123,33 +117,6 @@ class Chat {
 	}
 
 	private async _simulateAiIntroduction(): Promise<void> {
-		const introMessages: Message[] = [
-			{
-				role: 'assistant',
-				content: '👋🏼 Hi there!'
-			},
-			{
-				role: 'assistant',
-				content:
-					"I'm an AI chatbot trained to answer your questions about **Uciel Sola**—his work, experience, and projects."
-			},
-			{
-				role: 'assistant',
-				content:
-					"If you're looking for his resume, you can download it here: [Download Resume](https://ucielsola.dev/ucielsola.pdf)."
-			},
-			{
-				role: 'assistant',
-				content:
-					'Want to reach out? You can connect via [LinkedIn](https://LinkedIn.com/in/ucielsola) or send an email to [solauciel@gmail.com](mailto:solauciel@gmail.com)'
-			},
-			{
-				role: 'assistant',
-				content:
-					'You can also check out some of his side projects on [GitHub](https://Github.com/ucielsola)'
-			}
-		];
-
 		const wordsDelay = 30;
 		const sentenceDelay = 250;
 
