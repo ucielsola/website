@@ -1,0 +1,16 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Anthropic-AI
+Disallow: /
+
+User-agent: *
+Disallow:
+
+Sitemap: https://ucielsola.dev/sitemap.xml
