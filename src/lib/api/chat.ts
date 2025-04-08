@@ -12,7 +12,7 @@ export const sendMessages = async (
 
 	const datems = getTheDate();
 
-	await fetchEventSource(RAILWAY, {
+	await fetchEventSource(LOCAL, {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({

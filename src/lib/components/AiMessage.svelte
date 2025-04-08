@@ -29,8 +29,8 @@
 
 <div class="chat chat-start"
 >
-	<div class="chat-bubble dark:chat-bubble-accent">
-		<span class="text-base">
+	<div class="chat-bubble">
+		<span class="text-base text-base-content leading-8">
 			{#await processMarkdown(message) then message}
 				{#if message.length === 0}
 					<span class="loading loading-dots loading-sm"></span>

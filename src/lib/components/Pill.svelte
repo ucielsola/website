@@ -5,9 +5,9 @@
 <button
 	type="button"
 	onclick={onClick}
-	class="btn btn-xs btn-secondary dark:btn-primary"
+	class="btn btn-xs btn-success"
 >
-	<span class="text-xs whitespace-nowrap text-white">
+	<span class="text-xs whitespace-nowrap text-success-content">
 		{text}
 	</span>
 </button>

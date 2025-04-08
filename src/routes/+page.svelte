@@ -9,7 +9,7 @@
 	<title>Uciel Sola</title>
 </svelte:head>
 
-<div class="bg-base-200 dark:bg-base-300 relative flex h-dvh w-dvw flex-col overflow-hidden">
+<div class="relative flex h-dvh w-dvw flex-col overflow-hidden">
 	<div class="border-secondary flex items-center justify-between border-b px-6 py-3">
 		<h1 class="absolute top-0 text-white/0">Uciel Sola</h1>
 		<div class="flex items-center gap-1">
@@ -18,7 +18,7 @@
 		</div>
 		<div class="flex items-center gap-3">
 			<a
-				class="btn btn-circle btn-accent dark:btn-primary p-1 text-white"
+				class="btn btn-circle btn-success p-1 text-white"
 				href="https://github.com/ucielsola"
 				target="_blank"
 				title="Uciel Sola's Github"
@@ -26,7 +26,7 @@
 				<GithubIcon />
 			</a>
 			<a
-				class="btn btn-circle btn-accent dark:btn-primary p-1 text-white"
+				class="btn btn-circle btn-success p-1 text-white"
 				href="https://linkedin.com/in/ucielsola"
 				target="_blank"
 				title="Uciel Sola's Linkedin profile"
